@@ -1,0 +1,246 @@
+{
+    "edges": [
+        {
+            "source": 2,
+            "target": 1
+        },
+        {
+            "source": 4,
+            "target": 3
+        },
+        {
+            "source": 6,
+            "target": 5
+        },
+        {
+            "source": 8,
+            "target": 7
+        },
+        {
+            "source": 10,
+            "target": 9
+        },
+        {
+            "source": 12,
+            "target": 11
+        },
+        {
+            "source": 14,
+            "target": 13
+        },
+        {
+            "source": 16,
+            "target": 15
+        },
+        {
+            "source": 18,
+            "target": 17
+        },
+        {
+            "source": 20,
+            "target": 19
+        },
+        {
+            "source": 22,
+            "target": 21
+        },
+        {
+            "source": 24,
+            "target": 23
+        },
+        {
+            "source": 26,
+            "target": 25
+        },
+        {
+            "source": 28,
+            "target": 27
+        },
+        {
+            "source": 30,
+            "target": 29
+        }
+    ],
+    "nodes": [
+        {
+            "cluster": "1",
+            "id": 1,
+            "label": "paper",
+            "title": "On the Complementation Rule for Multivalued Dependencies in Database Relations."
+        },
+        {
+            "cluster": "2",
+            "label": "author",
+            "id": 2,
+            "title": "Joachim Biskup"
+        },
+        {
+            "cluster": "1",
+            "id": 3,
+            "label": "paper",
+            "title": "Verifying a simplification of mutual exclusion by Lycklama-Hadzilacos."
+        },
+        {
+            "cluster": "2",
+            "label": "author",
+            "id": 4,
+            "title": "Wim H. Hesselink"
+        },
+        {
+            "cluster": "1",
+            "id": 5,
+            "label": "paper",
+            "title": "The Expressive Power of Delay Operators in SCCS."
+        },
+        {
+            "cluster": "2",
+            "label": "author",
+            "id": 6,
+            "title": "Carol Critchlow"
+        },
+        {
+            "cluster": "1",
+            "id": 7,
+            "label": "paper",
+            "title": "Fifo Nets Without Order Deadlock."
+        },
+        {
+            "cluster": "2",
+            "label": "author",
+            "id": 8,
+            "title": "Alain Finkel"
+        },
+        {
+            "cluster": "1",
+            "id": 9,
+            "label": "paper",
+            "title": "Calculi for Interaction."
+        },
+        {
+            "cluster": "2",
+            "label": "author",
+            "id": 10,
+            "title": "Robin Milner"
+        },
+        {
+            "cluster": "1",
+            "id": 11,
+            "label": "paper",
+            "title": "Pattern Matching in Trees and Nets."
+        },
+        {
+            "cluster": "2",
+            "label": "author",
+            "id": 12,
+            "title": "Hans-Ulrich Simon"
+        },
+        {
+            "cluster": "1",
+            "id": 13,
+            "label": "paper",
+            "title": "A characterization of rational D0L power series."
+        },
+        {
+            "cluster": "2",
+            "label": "author",
+            "id": 14,
+            "title": "Juha Honkala"
+        },
+        {
+            "cluster": "1",
+            "id": 15,
+            "label": "paper",
+            "title": "A Three-Stage Construction for Multiconnection Networks."
+        },
+        {
+            "cluster": "2",
+            "label": "author",
+            "id": 16,
+            "title": "Christian Ronse"
+        },
+        {
+            "cluster": "1",
+            "id": 17,
+            "label": "paper",
+            "title": "The Derivation of Systolic Implementations of Programs."
+        },
+        {
+            "cluster": "2",
+            "label": "author",
+            "id": 18,
+            "title": "Chua-Huang Huang"
+        },
+        {
+            "cluster": "1",
+            "id": 19,
+            "label": "paper",
+            "title": "Equational weighted tree transformations."
+        },
+        {
+            "cluster": "2",
+            "label": "author",
+            "id": 20,
+            "title": "Symeon Bozapalidis"
+        },
+        {
+            "cluster": "1",
+            "id": 21,
+            "label": "paper",
+            "title": "Merged processes: a new condensed representation of Petri net behaviour."
+        },
+        {
+            "cluster": "2",
+            "label": "author",
+            "id": 22,
+            "title": "Victor Khomenko"
+        },
+        {
+            "cluster": "1",
+            "id": 23,
+            "label": "paper",
+            "title": "On the Power of Chain Rules in Context Free Grammars."
+        },
+        {
+            "cluster": "2",
+            "label": "author",
+            "id": 24,
+            "title": "Norbert Blum"
+        },
+        {
+            "cluster": "1",
+            "id": 25,
+            "label": "paper",
+            "title": "Parallel Integer Sorting and Simulation Amongst CRCW Models."
+        },
+        {
+            "cluster": "2",
+            "label": "author",
+            "id": 26,
+            "title": "Sanjeev Saxena"
+        },
+        {
+            "cluster": "1",
+            "id": 27,
+            "label": "paper",
+            "title": "Schnelle Multiplikation von Polynomen uuml;ber Kouml;rpern der Charakteristik 2."
+        },
+        {
+            "cluster": "2",
+            "label": "author",
+            "id": 28,
+            "title": "Arnold Schouml;nhage"
+        },
+        {
+            "cluster": "1",
+            "id": 29,
+            "label": "paper",
+            "title": "NP-complete Problems Simplified on Tree Schemas."
+        },
+        {
+            "cluster": "2",
+            "label": "author",
+            "id": 30,
+            "title": "Nathan Goodman"
+        }
+    ]
+}

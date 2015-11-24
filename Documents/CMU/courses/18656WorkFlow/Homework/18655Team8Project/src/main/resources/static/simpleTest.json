@@ -1,0 +1,28 @@
+{
+  "edges": [
+    {
+      "source": 28,
+      "target": 13
+    }
+  ],
+  "nodes": [
+    {
+      "title": "Aaron Sorkin",
+      "id": 28,
+      "label": "paper",
+      "cluster": 2
+    },
+    {
+      "id": 13,
+      "title": "Al Pacino",
+      "label": "paper",
+      "cluster": 1
+    },
+    {
+      "title": "Annabella Sciorra",
+      "label": "author",
+      "id": 57,
+      "cluster": 4
+    }
+  ]
+}
