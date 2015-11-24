@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Sizing</title>
+
+  <style type="text/css">
+    html, body {
+      font: 10pt arial;
+    }
+    #mynetwork {
+      width: 600px;
+      height: 600px;
+      border: 1px solid lightgray;
+    }
+  </style>
+
+  <script type="text/javascript" src="javascript/vis.js"></script>
+  <script type="text/javascript" src="javascript/jquery-2.1.4.js"></script>
+  <link href="css/vis.css" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript">
+    var nodes = null;
+    var edges = null;
+    var network = null;
+
+    function draw() {
+      var params = {};
+      var param_array = window.location.href.split('?')[1].split('&');
+      for(var i in param_array){
+          x = param_array[i].split('=');
+          params[x[0]] = x[1];
+      }
+      console.log(params);
+      var test = null;
+      $.ajax({
+	  	  url: "Query1Test",
+	  	  type: "GET",
+	  	  contentType: "applcation/json",
+	  	  data: params
+	  	}).done(function(data) {
+	        var data = JSON.parse(data);
+	        var container = document.getElementById('mynetwork');
+	        var options = {
+	          stabilize:false,
+	          edges: {
+	            color: {
+	              color: "gray",
+	              highlight: "gray",
+	            },
+	          },
+	          nodes: {
+	            shape: 'dot',
+	            radiusMin: 10,
+	            radiusMax: 30,
+	          },
+	          groups: {
+	            user: {
+	              color:"#F2545A",
+	              shape:"star",
+	            },
+	            feature: {
+	              shape:"triangle",
+	              color:"#EC8F93",
+	            },
+	            service: {
+	              color:"#EF777C",
+	              shape:"dot",
+	            }
+	          },
+	          tooltip: {
+	            delay: 300,
+	            fontColor: "black",
+	            fontSize: 14, // px
+	            fontFace: "verdana",
+	            color: {
+	              border: "#666",
+	              background: "#FFFFC6"
+	            }
+	          }
+	        };
+
+	        var network = new vis.Network(container, data, options);
+	        network.focusOnNode(19);
+	        network.on('select', function(properties) {
+	          var select_node = $.grep(data.nodes, function(e){
+	            return e["id"] == properties.nodes[0];
+	          })[0];
+	          if(select_node["group"] == "service"){
+	            var select_edges = $.grep(data.edges, function(e) { 
+	              return e["from"] == select_node["id"] });
+	            var textVal = "";
+	            textVal += "<h3>"+select_node["label"]+"</h3>";
+	            textVal += "<div><h4>Keywords:</h4><h4>"
+	            for (var i = select_edges.length - 1; i >= 0; i--) {
+	              textVal += "<span class=\"label label-primary\">"+select_edges[i]["to"]+"</span>\n";
+	            };
+	            textVal += "</h4></div>";
+	            textVal += "<div><img src=\""+select_node["image"]+"\" class=\"img-responsive\"></div>";
+	            $("#testText").html(textVal);
+	          }
+	        });
+	  	});
+    }
+  </script>
+  <script src="javascript/googleAnalytics.js"></script>
+</head>
+<body onload="draw()">
+<p>
+  Simple Knowledge Graph
+</p>
+  <div id="mynetwork"></div>
+  <div id="graphText">
+    <div class="row">
+      <div class="col-lg-6" id="testGraph">
+      </div>
+      <div class="col-lg-6" id="testText">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
